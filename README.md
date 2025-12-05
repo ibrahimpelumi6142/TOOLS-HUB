@@ -56,15 +56,20 @@ ToolsHub is built on a scalable, modular backend-driven design:
 ## 🧬 Project Structure
 
 ```txt
+
 toolshub/
- ├─ app/tools/...          # UI pages for each tool
- ├─ app/api/...            # Serverless backend routes
- ├─ components/            # UI components
- ├─ lib/                   # Utility functions
- ├─ public/                # Static assets
- ├─ docs/                  # Technical documentation
- ├─ .env.example           # Sample environment variables
- └─ README.md              # Project documentation
+ ├─ app/
+     ├─ page.tsx      <-- homepage
+ │   ├─ tools/...           # UI pages for each tool
+ │   ├─ api/...             # Backend API route handlers
+ │   └─ layout.tsx          # Root layout
+ ├─ components/             # Reusable UI components
+ ├─ lib/                    # Utility functions & helpers
+ ├─ public/                 # Static assets
+ ├─ docs/                   # Technical documentation
+ ├─ .env.example            # Example environment variables
+ └─ README.md               # Project documentation
+
 ```
 
 ---
