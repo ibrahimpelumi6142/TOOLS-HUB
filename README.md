@@ -142,6 +142,7 @@ npm run test
 - Node.js + PM2	✅
 - Docker	✅
 - Cloudflare Tunnel	✅
+- *Note: For heavy processing (PDF/Image tools), a VPS with Node.js + PM2 is recommended instead of Vercel.*
 
 ---
 
