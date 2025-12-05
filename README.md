@@ -51,22 +51,21 @@ ToolsHub is built on a scalable, modular backend-driven design:
 - ☁️ **Cloudflare + Nginx** for global performance and SSL  
 - 🔐 Secure environment secrets for API keys  
 
-See detailed architecture docs in `/docs/architecture.md`.
-
 ---
 
 ## 🧬 Project Structure
 
+```txt
 toolshub/
-├─ app/tools/... # UI pages for each tool
-├─ app/api/... # Serverless backend routes
-├─ components/ # UI components
-├─ lib/ # Utility functions
-├─ public/ # Static assets
-├─ docs/ # Technical documentation
-├─ .env.example # Sample environment variables
-└─ README.md # Project documentation
-
+ ├─ app/tools/...          # UI pages for each tool
+ ├─ app/api/...            # Serverless backend routes
+ ├─ components/            # UI components
+ ├─ lib/                   # Utility functions
+ ├─ public/                # Static assets
+ ├─ docs/                  # Technical documentation
+ ├─ .env.example           # Sample environment variables
+ └─ README.md              # Project documentation
+```
 
 ---
 
@@ -74,177 +73,151 @@ toolshub/
 
 ### 1️⃣ Clone the Repository
 
-```bash
+```txt
 git clone https://github.com/ibrahimpelumi6142/toolshub.git
 cd toolshub
+```
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
+
+```txt
 npm install
+```
 
-3️⃣ Add Environment Variables
+### 3️⃣ Add Environment Variables
 
-Create a .env file using .env.example:
-
+#### Create a .env file:
+```txt
 OPENAI_API_KEY=
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 RAPIDAPI_KEY=
 FILE_UPLOAD_PATH=./uploads
+```
 
-4️⃣ Run the Development Server
+### 4️⃣ Run the Development Server
+
+```txt
 npm run dev
+```
 
+### Visit:
 
-Visit:
 👉 http://localhost:3000
 
-🧩 Adding a New Tool
+---
 
-Create a folder inside:
+## 🧩 Adding a New Tool
 
-app/tools/tool-name/
+### Create a UI page:
 
+```txt
+app/tools/tool-name/page.tsx
+```
 
-Add an API route:
+### Create backend API route:
 
+```txt
 app/api/tool-name/route.ts
+```
 
+#### Example:
 
-ToolsHub automatically integrates the tool UI + API.
-
-Example:
-
+```txt
 app/tools/image-resizer/page.tsx
 app/api/image-resizer/route.ts
+```
 
-🧪 Testing
+### 🧪 Testing
 
-Run tests using:
-
+```txt
 npm run test
+```
 
+---
 
-Optional: Integrate Jest or Vitest.
+## 📦 Deployment Options
 
-📦 Deployment Options
+- Platform	Supported
+- Vercel	✅
+- Node.js + PM2	✅
+- Docker	✅
+- Cloudflare Tunnel	✅
 
-ToolsHub supports:
+---
 
-Platform	Supported
-Vercel	✅
-Node.js + PM2	✅
-Docker	✅
-Cloudflare Tunnel	✅
-Production Setup (Recommended)
+## Recommended Production Setup
 
-Nginx reverse proxy
+- Nginx reverse proxy
+- PM2
+- Cloudflare SSL or Certbot
+- CDN caching
 
-PM2 process manager
+---
 
-SSL via Cloudflare or Certbot
+## 💳 Monetization Options
 
-Static asset caching
+- Google AdSense
+- Stripe subscriptions
+- Pay-per-use billing
+- Credit-based AI tools
 
-See /docs/deployment.md for steps.
+## 📈 Roadmap
 
-💳 Monetization Options
+- User accounts
+- Stripe integration
+- Bulk PDF tools
+- More AI tools
+- Tool marketplace
+- Mobile app
 
-ToolsHub can support:
+---
 
-Google AdSense
+## 👨‍💻 Author
+- Lasisi Ibrahim Pelumi
+- Full-Stack Engineer • SaaS Developer • Automation Specialist
+- 📍 Sheffield, UK
+- GitHub: https://github.com/ibrahimpelumi6142
+- Email: ibrahimpelumi6142@gmail.com
 
-Stripe subscription plans
+---
 
-Pay-per-use billing
+## ⭐ Contributing Guide
 
-Credit-based AI tools
+### Contributing to ToolsHub
 
-📈 Roadmap
+#### How to Contribute
+  - Fork the repository
+  - Create a new branch
+  - Commit your changes
+  - Open a pull request
 
- User accounts & authentication
+#### Guidelines
+- Keep code modular
+- Use clear naming
+- Add comments where useful
+- Follow Next.js + Node.js best practices
 
- Stripe monetization
+---
 
- Bulk PDF tools
+## 📝 CHANGELOG
 
- More AI generators
-
- Tool marketplace
-
- Mobile app version
-
-👨‍💻 Author
-
-Lasisi Ibrahim Pelumi
-Full-Stack Engineer • SaaS Developer • Automation Specialist
-📍 Sheffield, UK
-
-GitHub: https://github.com/ibrahimpelumi6142
-
-Email: ibrahimpelumi6142@gmail.com
-
-⭐ Contributing
-
-Contributions are welcome!
-Feel free to open an issue or submit a pull request.
-
-📜 LICENSE (MIT License)
-MIT License
-
-Copyright (c) 2025 Lasisi Ibrahim 
-Pelumi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software...
-
-📄 .env.example
-# === ToolsHub Environment Variables ===
-
-# OpenAI / AI Tools
-OPENAI_API_KEY=
-
-# Base URL (local development)
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-# Social Media APIs (optional)
-RAPIDAPI_KEY=
-
-# Image & PDF routing configs
-FILE_UPLOAD_PATH=./uploads
-
-📝 CHANGELOG.md
 # 📌 Changelog – ToolsHub
 
 ## v1.0.0 – Initial Release
-- Added PDF tools (convert, merge, compress)
-- Added image tools (resize, compress, convert)
-- Added social downloaders (Instagram, TikTok, YouTube)
-- Added AI tools (summarizer, writer, assistant)
-- Created documentation folder
+- Added PDF tools
+- Added image tools
+- Added social downloaders
+- Added AI tools
+- Added documentation
 - Added environment config
 - Implemented API architecture
 
-🤝 CONTRIBUTING.md
-# Contributing to ToolsHub
+---
+  
+## 📜 LICENSE (MIT)
 
-Thanks for your interest in contributing!
+### MIT License
 
-## How to Contribute
-1. Fork the repository  
-2. Create a new branch  
-3. Commit your changes  
-4. Open a pull request  
-
-## Coding Guidelines
-- Keep code modular and reusable  
-- Use descriptive file names  
-- Add comments where needed  
-- Follow Next.js and Node.js best practices  
-
-## Issues
-Create an issue if:
-- You found a bug  
-- You want a new tool added  
-- You want to suggest improvements  
+- Copyright (c)
+- 2025 Lasisi Ibrahim Pelumi
+- Permission is hereby granted, free of charge, to any person obtaining a copy...
