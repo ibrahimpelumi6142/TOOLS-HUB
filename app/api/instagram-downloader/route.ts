@@ -1,0 +1,6 @@
+export async function POST(req: Request) {
+  return Response.json({
+    status: "ok",
+    message: "Instagram downloader API placeholder",
+  });
+}
